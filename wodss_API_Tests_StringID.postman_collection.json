@@ -980,59 +980,6 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"active\": true,\r\n  \"firstName\": \"{{PROJECTMANAGER 1 firstName}}\",\r\n  \"lastName\": \"{{PROJECTMANAGER 1 lastName}}\",\r\n  \"emailAddress\": \"no.tld@inmail\"\r\n}"
-								},
-								"url": {
-									"raw": "{{Host}}/api/employee/:id",
-									"host": [
-										"{{Host}}"
-									],
-									"path": [
-										"api",
-										"employee",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "{{PROJECTMANAGER 1 id}}"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Update PROJECTMANAGER 1 should fail",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "3359f506-94fd-4535-bcbb-0f064c5320e3",
-										"exec": [
-											"pm.test(\"Status code is 412\", function () {",
-											"    pm.response.to.have.status(412);",
-											"});",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
 									"raw": "{\r\n  \"active\": true,\r\n  \"firstName\": \"{{PROJECTMANAGER 1 firstName}}\",\r\n  \"lastName\": \"{{PROJECTMANAGER 1 lastName}}\",\r\n  \"emailAddress\": \"llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch@Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch.com\"\r\n}"
 								},
 								"url": {
