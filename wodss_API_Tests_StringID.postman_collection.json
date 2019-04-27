@@ -11738,6 +11738,84 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Deactivate DEVELOPER 3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3359f506-94fd-4535-bcbb-0f064c5320e3",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Response has expected firstName: \"+ pm.environment.get(\"DEVELOPER 3 firstName\"), function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.firstName).to.eql(pm.environment.get(\"DEVELOPER 3 firstName\"));",
+											"});",
+											"",
+											"pm.test(\"Response has expected lastName: \"+ pm.environment.get(\"DEVELOPER 3 lastName\"), function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.lastName).to.eql(pm.environment.get(\"DEVELOPER 3 lastName\"));",
+											"});",
+											"",
+											"pm.test(\"Response has expected emailAddress: \"+ pm.environment.get(\"DEVELOPER 3 emailAddress\"), function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.emailAddress).to.eql(pm.environment.get(\"DEVELOPER 3 emailAddress\"));",
+											"});",
+											"",
+											"pm.test(\"Response has expected inactive\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.active).to.eql(false);",
+											"});",
+											"",
+											"pm.test(\"Response has expected role: DEVELOPER\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.role).to.eql(\"DEVELOPER\");",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"active\": false,\r\n  \"firstName\": \"{{DEVELOPER 3 firstName}}\",\r\n  \"lastName\": \"{{DEVELOPER 3 lastName}}\",\r\n  \"emailAddress\": \"{{DEVELOPER 3 emailAddress}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{Host}}/api/employee/:id",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"api",
+										"employee",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "{{DEVELOPER 3 id}}"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"auth": {
@@ -11843,6 +11921,103 @@
 							{
 								"key": "token",
 								"value": "{{DEVELOPER 2 token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "44c4ca86-f77e-47d2-b0a6-35704723fcf4",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "0b817ed2-f442-44c7-a36c-3912a5f4b243",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "with DEVELOPER 3",
+					"item": [
+						{
+							"name": "Request a JWT token for DEVELOPER 3 should fail",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b7709b55-1173-4bd0-a0c6-319afc62d0ee",
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {",
+											"    pm.response.to.have.status(404);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "a85da618-0370-466b-b200-3bc006e38f6e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"emailAddress\": \"{{DEVELOPER 3 emailAddress}}\",\r\n  \"rawPassword\": \"{{DEVELOPER 3 password}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{Host}}/api/token",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"api",
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{DEVELOPER 3 token}}",
 								"type": "string"
 							}
 						]
