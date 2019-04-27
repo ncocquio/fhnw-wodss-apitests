@@ -2864,148 +2864,6 @@
 							"response": []
 						},
 						{
-							"name": "Create DEVELOPER 1 should fail",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "c3d1d47f-9d85-4079-b81e-27ce18c93047",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "f646481d-f33b-41d9-aa0e-e2aa2dba606d",
-										"exec": [
-											"pm.test(\"Status code is 403\", function () {",
-											"    pm.response.to.have.status(403);",
-											"});",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"active\": true,\r\n  \"firstName\": \"{{DEVELOPER 1 firstName}}\",\r\n  \"lastName\": \"{{DEVELOPER 1 lastName}}\",\r\n  \"emailAddress\": \"{{DEVELOPER 1 emailAddress}}\"\r\n}"
-								},
-								"url": {
-									"raw": "{{Host}}/api/employee?password={{DEVELOPER 1 password}}&role=DEVELOPER",
-									"host": [
-										"{{Host}}"
-									],
-									"path": [
-										"api",
-										"employee"
-									],
-									"query": [
-										{
-											"key": "password",
-											"value": "{{DEVELOPER 1 password}}"
-										},
-										{
-											"key": "role",
-											"value": "DEVELOPER"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create PROJECTMANAGER 1 should fail",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "c3d1d47f-9d85-4079-b81e-27ce18c93047",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "f646481d-f33b-41d9-aa0e-e2aa2dba606d",
-										"exec": [
-											"pm.test(\"Status code is 403\", function () {",
-											"    pm.response.to.have.status(403);",
-											"});",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{ADMINISTRATOR 1 token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"active\": true,\r\n  \"firstName\": \"Wrong firstName\",\r\n  \"lastName\": \"{{PROJECTMANAGER 1 lastName}}\",\r\n  \"emailAddress\": \"{{PROJECTMANAGER 1 emailAddress}}\"\r\n}"
-								},
-								"url": {
-									"raw": "{{Host}}/api/employee?password={{PROJECTMANAGER 1 password}}&role=PROJECTMANAGER",
-									"host": [
-										"{{Host}}"
-									],
-									"path": [
-										"api",
-										"employee"
-									],
-									"query": [
-										{
-											"key": "password",
-											"value": "{{PROJECTMANAGER 1 password}}"
-										},
-										{
-											"key": "role",
-											"value": "PROJECTMANAGER"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Update PROJECTMANAGER 1 should fail",
 							"event": [
 								{
@@ -4723,148 +4581,6 @@
 							"response": []
 						},
 						{
-							"name": "Create DEVELOPER 1 should fail",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "c3d1d47f-9d85-4079-b81e-27ce18c93047",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "f646481d-f33b-41d9-aa0e-e2aa2dba606d",
-										"exec": [
-											"pm.test(\"Status code is 403\", function () {",
-											"    pm.response.to.have.status(403);",
-											"});",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"active\": true,\r\n  \"firstName\": \"{{DEVELOPER 1 firstName}}\",\r\n  \"lastName\": \"{{DEVELOPER 1 lastName}}\",\r\n  \"emailAddress\": \"{{DEVELOPER 1 emailAddress}}\"\r\n}"
-								},
-								"url": {
-									"raw": "{{Host}}/api/employee?password={{DEVELOPER 1 password}}&role=DEVELOPER",
-									"host": [
-										"{{Host}}"
-									],
-									"path": [
-										"api",
-										"employee"
-									],
-									"query": [
-										{
-											"key": "password",
-											"value": "{{DEVELOPER 1 password}}"
-										},
-										{
-											"key": "role",
-											"value": "DEVELOPER"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create PROJECTMANAGER 1 should fail",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "c3d1d47f-9d85-4079-b81e-27ce18c93047",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "f646481d-f33b-41d9-aa0e-e2aa2dba606d",
-										"exec": [
-											"pm.test(\"Status code is 403\", function () {",
-											"    pm.response.to.have.status(403);",
-											"});",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{ADMINISTRATOR 1 token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"active\": true,\r\n  \"firstName\": \"Wrong firstName\",\r\n  \"lastName\": \"{{PROJECTMANAGER 1 lastName}}\",\r\n  \"emailAddress\": \"{{PROJECTMANAGER 1 emailAddress}}\"\r\n}"
-								},
-								"url": {
-									"raw": "{{Host}}/api/employee?password={{PROJECTMANAGER 1 password}}&role=PROJECTMANAGER",
-									"host": [
-										"{{Host}}"
-									],
-									"path": [
-										"api",
-										"employee"
-									],
-									"query": [
-										{
-											"key": "password",
-											"value": "{{PROJECTMANAGER 1 password}}"
-										},
-										{
-											"key": "role",
-											"value": "PROJECTMANAGER"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Update PROJECTMANAGER 1 should fail",
 							"event": [
 								{
@@ -6474,9 +6190,9 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Allocation list has expected length of 7\", function () {",
+											"pm.test(\"Allocation list has expected length of 6\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.length).to.eql(7);",
+											"    pm.expect(jsonData.length).to.eql(6);",
 											"});",
 											""
 										],
@@ -7029,7 +6745,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{Host}}/api/allocation?projectId={{projectId}}",
+									"raw": "{{Host}}/api/allocation?projectId={{Project 1 id}}",
 									"host": [
 										"{{Host}}"
 									],
@@ -7045,7 +6761,7 @@
 										},
 										{
 											"key": "projectId",
-											"value": "{{projectId}}"
+											"value": "{{Project 1 id}}"
 										},
 										{
 											"key": "fromDate",
@@ -7622,7 +7338,7 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Developer employee list has expected length of 1\", function () {",
+											"pm.test(\"Projects list has expected length of 1\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData.length).to.eql(1);",
 											"});",
@@ -7685,7 +7401,7 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Developer employee list has expected length of 1\", function () {",
+											"pm.test(\"Projects list has expected length of 1\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData.length).to.eql(1);",
 											"});",
@@ -7747,7 +7463,7 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Developer employee list has expected length of 0\", function () {",
+											"pm.test(\"Projects list has expected length of 0\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData.length).to.eql(0);",
 											"});",
@@ -7809,9 +7525,9 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Developer employee list has expected length of 0\", function () {",
+											"pm.test(\"Projects list has expected length of 1\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.length).to.eql(0);",
+											"    pm.expect(jsonData.length).to.eql(1);",
 											"});",
 											""
 										],
@@ -7872,9 +7588,9 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Developer employee list has expected length of 0\", function () {",
+											"pm.test(\"Projects list has expected length of 2\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.length).to.eql(0);",
+											"    pm.expect(jsonData.length).to.eql(2);",
 											"});",
 											""
 										],
@@ -7935,9 +7651,9 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Developer employee list has expected length of 1\", function () {",
+											"pm.test(\"Projects list has expected length of 3\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.length).to.eql(1);",
+											"    pm.expect(jsonData.length).to.eql(3);",
 											"});",
 											""
 										],
@@ -7986,7 +7702,7 @@
 							"response": []
 						},
 						{
-							"name": "Get all Projects of PROJECTMANAGER 1 between two Dates Copy",
+							"name": "Get all Projects of PROJECTMANAGER 1 between two Dates",
 							"event": [
 								{
 									"listen": "test",
@@ -7997,7 +7713,7 @@
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Developer employee list has expected length of 2\", function () {",
+											"pm.test(\"Projects list has expected length of 2\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData.length).to.eql(2);",
 											"});",
@@ -8849,224 +8565,6 @@
 									"path": [
 										"api",
 										"token"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create DEVELOPER 1 should fail",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "c3d1d47f-9d85-4079-b81e-27ce18c93047",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "f646481d-f33b-41d9-aa0e-e2aa2dba606d",
-										"exec": [
-											"pm.test(\"Status code is 403\", function () {",
-											"    pm.response.to.have.status(403);",
-											"});",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"active\": true,\r\n  \"firstName\": \"{{DEVELOPER 1 firstName}}\",\r\n  \"lastName\": \"{{DEVELOPER 1 lastName}}\",\r\n  \"emailAddress\": \"{{DEVELOPER 1 emailAddress}}\"\r\n}"
-								},
-								"url": {
-									"raw": "{{Host}}/api/employee?password={{DEVELOPER 1 password}}&role=DEVELOPER",
-									"host": [
-										"{{Host}}"
-									],
-									"path": [
-										"api",
-										"employee"
-									],
-									"query": [
-										{
-											"key": "password",
-											"value": "{{DEVELOPER 1 password}}"
-										},
-										{
-											"key": "role",
-											"value": "DEVELOPER"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create PROJECTMANAGER 1 should fail",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "c3d1d47f-9d85-4079-b81e-27ce18c93047",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "f646481d-f33b-41d9-aa0e-e2aa2dba606d",
-										"exec": [
-											"pm.test(\"Status code is 403\", function () {",
-											"    pm.response.to.have.status(403);",
-											"});",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{ADMINISTRATOR 1 token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"active\": true,\r\n  \"firstName\": \"Wrong firstName\",\r\n  \"lastName\": \"{{PROJECTMANAGER 1 lastName}}\",\r\n  \"emailAddress\": \"{{PROJECTMANAGER 1 emailAddress}}\"\r\n}"
-								},
-								"url": {
-									"raw": "{{Host}}/api/employee?password={{PROJECTMANAGER 1 password}}&role=PROJECTMANAGER",
-									"host": [
-										"{{Host}}"
-									],
-									"path": [
-										"api",
-										"employee"
-									],
-									"query": [
-										{
-											"key": "password",
-											"value": "{{PROJECTMANAGER 1 password}}"
-										},
-										{
-											"key": "role",
-											"value": "PROJECTMANAGER"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create ADMINISTRATOR 2 should fail",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "c3d1d47f-9d85-4079-b81e-27ce18c93047",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "f646481d-f33b-41d9-aa0e-e2aa2dba606d",
-										"exec": [
-											"pm.test(\"Status code is 403\", function () {",
-											"    pm.response.to.have.status(403);",
-											"});",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{ADMINISTRATOR 1 token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"active\": true,\r\n  \"firstName\": \"{{ADMINISTRATOR 2 firstName}}\",\r\n  \"lastName\": \"{{ADMINISTRATOR 2 lastName}}\",\r\n  \"emailAddress\": \"{{ADMINISTRATOR 2 emailAddress}}\"\r\n}"
-								},
-								"url": {
-									"raw": "{{Host}}/api/employee?password={{ADMINISTRATOR 2 password}}&role=ADMINISTRATOR",
-									"host": [
-										"{{Host}}"
-									],
-									"path": [
-										"api",
-										"employee"
-									],
-									"query": [
-										{
-											"key": "password",
-											"value": "{{ADMINISTRATOR 2 password}}"
-										},
-										{
-											"key": "role",
-											"value": "ADMINISTRATOR"
-										}
 									]
 								}
 							},
@@ -10098,13 +9596,8 @@
 									"script": {
 										"id": "380f2729-677d-4987-b481-dd887fed7934",
 										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"",
-											"pm.test(\"Allocation list has expected length of 0\", function () {",
-											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.length).to.eql(0);",
+											"pm.test(\"Status code is 403\", function () {",
+											"    pm.response.to.have.status(403);",
 											"});",
 											""
 										],
@@ -10362,6 +9855,70 @@
 							"response": []
 						},
 						{
+							"name": "Get all allocations of Project 3 should fail",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "380f2729-677d-4987-b481-dd887fed7934",
+										"exec": [
+											"pm.test(\"Status code is 403\", function () {",
+											"    pm.response.to.have.status(403);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{Host}}/api/allocation?projectId={{Project 3 id}}",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"api",
+										"allocation"
+									],
+									"query": [
+										{
+											"key": "employeeId",
+											"value": "{{DEVELOPER 1 id}}",
+											"disabled": true
+										},
+										{
+											"key": "projectId",
+											"value": "{{Project 3 id}}"
+										},
+										{
+											"key": "fromDate",
+											"value": "{{fromDate}}",
+											"disabled": true
+										},
+										{
+											"key": "toDate",
+											"value": "{{toDate}}",
+											"disabled": true
+										}
+									]
+								},
+								"description": "DEVELOPER 1 is not involved in Project 3"
+							},
+							"response": []
+						},
+						{
 							"name": "Get all allocations of Project 1",
 							"event": [
 								{
@@ -10396,7 +9953,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{Host}}/api/allocation?projectId={{projectId}}",
+									"raw": "{{Host}}/api/allocation?projectId={{Project 1 id}}",
 									"host": [
 										"{{Host}}"
 									],
@@ -10412,7 +9969,7 @@
 										},
 										{
 											"key": "projectId",
-											"value": "{{projectId}}"
+											"value": "{{Project 1 id}}"
 										},
 										{
 											"key": "fromDate",
@@ -10643,7 +10200,7 @@
 											"",
 											"pm.test(\"Contract list has expected length of 2\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.length).to.eql(5);",
+											"    pm.expect(jsonData.length).to.eql(2);",
 											"});",
 											""
 										],
@@ -12320,274 +11877,6 @@
 				{
 					"name": "with Guest",
 					"item": [
-						{
-							"name": "Create DEVELOPER 1 should fail",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "c3d1d47f-9d85-4079-b81e-27ce18c93047",
-										"exec": [
-											"function formatDate(date) {\r",
-											"    var d = new Date(date),\r",
-											"        month = '' + (d.getMonth() + 1),\r",
-											"        day = '' + d.getDate(),\r",
-											"        year = d.getFullYear();\r",
-											"\r",
-											"    if (month.length < 2) month = '0' + month;\r",
-											"    if (day.length < 2) day = '0' + day;\r",
-											"\r",
-											"    return [year, month, day].join('-');\r",
-											"}\r",
-											"\r",
-											"var nineMonthsBack = new Date();\r",
-											"nineMonthsBack.setMonth(nineMonthsBack.getMonth() - 9);\r",
-											"pm.environment.set(\"nineMonthsBack\", formatDate(nineMonthsBack));\r",
-											"\r",
-											"var eightMonthsBack = new Date();\r",
-											"eightMonthsBack.setMonth(eightMonthsBack.getMonth() - 8);\r",
-											"pm.environment.set(\"eightMonthsBack\", formatDate(eightMonthsBack));\r",
-											"\r",
-											"var sevenMonthsBack = new Date();\r",
-											"sevenMonthsBack.setMonth(sevenMonthsBack.getMonth() - 7);\r",
-											"pm.environment.set(\"sevenMonthsBack\", formatDate(sevenMonthsBack));\r",
-											"\r",
-											"var sixMonthsBack = new Date();\r",
-											"sixMonthsBack.setMonth(sixMonthsBack.getMonth() - 6);\r",
-											"pm.environment.set(\"sixMonthsBack\", formatDate(sixMonthsBack));\r",
-											"\r",
-											"var fiveMonthsBack = new Date();\r",
-											"fiveMonthsBack.setMonth(fiveMonthsBack.getMonth() - 5);\r",
-											"pm.environment.set(\"fiveMonthsBack\", formatDate(fiveMonthsBack));\r",
-											"\r",
-											"var fourMonthsBack = new Date();\r",
-											"fourMonthsBack.setMonth(fourMonthsBack.getMonth() - 4);\r",
-											"pm.environment.set(\"fourMonthsBack\", formatDate(fourMonthsBack));\r",
-											"\r",
-											"var threeMonthsBack = new Date();\r",
-											"threeMonthsBack.setMonth(threeMonthsBack.getMonth() - 3);\r",
-											"pm.environment.set(\"threeMonthsBack\", formatDate(threeMonthsBack));\r",
-											"\r",
-											"var twoMonthsBack = new Date();\r",
-											"twoMonthsBack.setMonth(twoMonthsBack.getMonth() - 2);\r",
-											"pm.environment.set(\"twoMonthsBack\", formatDate(twoMonthsBack));\r",
-											"\r",
-											"var oneMonthsBack = new Date();\r",
-											"oneMonthsBack.setMonth(oneMonthsBack.getMonth() - 1);\r",
-											"pm.environment.set(\"oneMonthsBack\", formatDate(oneMonthsBack));\r",
-											"\r",
-											"var today = new Date();\r",
-											"pm.environment.set(\"today\", formatDate(today));\r",
-											"\r",
-											"var inOneMonths = new Date();\r",
-											"inOneMonths.setMonth(inOneMonths.getMonth() + 1);\r",
-											"pm.environment.set(\"inOneMonths\", formatDate(inOneMonths));\r",
-											"\r",
-											"var inTwoMonths = new Date();\r",
-											"inTwoMonths.setMonth(inTwoMonths.getMonth() + 2);\r",
-											"pm.environment.set(\"inTwoMonths\", formatDate(inTwoMonths));\r",
-											"\r",
-											"var inThreeMonths = new Date();\r",
-											"inThreeMonths.setMonth(inThreeMonths.getMonth() + 3);\r",
-											"pm.environment.set(\"inThreeMonths\", formatDate(inThreeMonths));\r",
-											"\r",
-											"var inFourMonths = new Date();\r",
-											"inFourMonths.setMonth(inFourMonths.getMonth() + 4);\r",
-											"pm.environment.set(\"inFourMonths\", formatDate(inFourMonths));\r",
-											"\r",
-											"var inFiveMonths = new Date();\r",
-											"inFiveMonths.setMonth(inFiveMonths.getMonth() + 5);\r",
-											"pm.environment.set(\"inFiveMonths\", formatDate(inFiveMonths));\r",
-											"\r",
-											"var inSixMonths = new Date();\r",
-											"inSixMonths.setMonth(inSixMonths.getMonth() + 6);\r",
-											"pm.environment.set(\"inSixMonths\", formatDate(inSixMonths));\r",
-											"\r",
-											"var inSevenMonths = new Date();\r",
-											"inSevenMonths.setMonth(inSevenMonths.getMonth() + 7);\r",
-											"pm.environment.set(\"inSevenMonths\", formatDate(inSevenMonths));\r",
-											"\r",
-											"var inEightMonths = new Date();\r",
-											"inEightMonths.setMonth(inEightMonths.getMonth() + 8);\r",
-											"pm.environment.set(\"inEightMonths\", formatDate(inEightMonths));\r",
-											"\r",
-											"var inNineMonths = new Date();\r",
-											"inNineMonths.setMonth(inNineMonths.getMonth() + 9);\r",
-											"pm.environment.set(\"inNineMonths\", formatDate(inNineMonths));\r",
-											"\r",
-											"var inTenMonths = new Date();\r",
-											"inTenMonths.setMonth(inTenMonths.getMonth() + 10);\r",
-											"pm.environment.set(\"inTenMonths\", formatDate(inTenMonths));\r",
-											"\r",
-											"var inElevenMonths = new Date();\r",
-											"inElevenMonths.setMonth(inElevenMonths.getMonth() + 11);\r",
-											"pm.environment.set(\"inElevenMonths\", formatDate(inElevenMonths));\r",
-											"\r",
-											"var inTwelveMonths = new Date();\r",
-											"inTwelveMonths.setMonth(inTwelveMonths.getMonth() + 12);\r",
-											"pm.environment.set(\"inTwelveMonths\", formatDate(inTwelveMonths));\r",
-											"\r",
-											"var inThirteenMonths = new Date();\r",
-											"inThirteenMonths.setMonth(inThirteenMonths.getMonth() + 13);\r",
-											"pm.environment.set(\"inThirteenMonths\", formatDate(inThirteenMonths));\r",
-											"\r",
-											"\r",
-											"\r",
-											"var nineMonthsAndOneDayBack = new Date();\r",
-											"nineMonthsAndOneDayBack.setDate(nineMonthsBack.getDate() - 1);\r",
-											"pm.environment.set(\"nineMonthsAndOneDayBack\", formatDate(nineMonthsAndOneDayBack));\r",
-											"\r",
-											"var eightMonthsAndOneDayBack = new Date();\r",
-											"eightMonthsAndOneDayBack.setDate(eightMonthsBack.getDate() - 1);\r",
-											"pm.environment.set(\"eightMonthsAndOneDayBack\", formatDate(eightMonthsAndOneDayBack));\r",
-											"\r",
-											"var sevenMonthsAndOneDayBack = new Date();\r",
-											"sevenMonthsAndOneDayBack.setDate(sevenMonthsBack.getDate() - 1);\r",
-											"pm.environment.set(\"sevenMonthsAndOneDayBack\", formatDate(sevenMonthsAndOneDayBack));\r",
-											"\r",
-											"var sixMonthsAndOneDayBack = new Date();\r",
-											"sixMonthsAndOneDayBack.setDate(sixMonthsBack.getDate() - 1);\r",
-											"pm.environment.set(\"sixMonthsAndOneDayBack\", formatDate(sixMonthsAndOneDayBack));\r",
-											"\r",
-											"var fiveMonthsAndOneDayBack = new Date();\r",
-											"fiveMonthsAndOneDayBack.setDate(fiveMonthsBack.getDate() - 1);\r",
-											"pm.environment.set(\"fiveMonthsAndOneDayBack\", formatDate(fiveMonthsAndOneDayBack));\r",
-											"\r",
-											"var fourMonthsAndOneDayBack = new Date();\r",
-											"fourMonthsAndOneDayBack.setDate(fourMonthsBack.getDate() - 1);\r",
-											"pm.environment.set(\"fourMonthsAndOneDayBack\", formatDate(fourMonthsAndOneDayBack));\r",
-											"\r",
-											"var threeMonthsAndOneDayBack = new Date();\r",
-											"threeMonthsAndOneDayBack.setDate(threeMonthsBack.getDate() - 1);\r",
-											"pm.environment.set(\"threeMonthsAndOneDayBack\", formatDate(threeMonthsAndOneDayBack));\r",
-											"\r",
-											"var twoMonthsAndOneDayBack = new Date();\r",
-											"twoMonthsAndOneDayBack.setDate(twoMonthsBack.getDate() - 1);\r",
-											"pm.environment.set(\"twoMonthsAndOneDayBack\", formatDate(twoMonthsAndOneDayBack));\r",
-											"\r",
-											"var oneMonthsAndOneDayBack = new Date();\r",
-											"oneMonthsAndOneDayBack.setDate(oneMonthsBack.getDate() - 1);\r",
-											"pm.environment.set(\"oneMonthsAndOneDayBack\", formatDate(oneMonthsAndOneDayBack));\r",
-											"\r",
-											"var today = new Date();\r",
-											"pm.environment.set(\"today\", formatDate(today));\r",
-											"\r",
-											"var yesterday = new Date();\r",
-											"yesterday.setDate(today.getDate() - 1);\r",
-											"pm.environment.set(\"yesterday\", formatDate(yesterday));\r",
-											"\r",
-											"var tomorrow = new Date();\r",
-											"tomorrow.setDate(today.getDate() + 1);\r",
-											"pm.environment.set(\"tomorrow\", formatDate(tomorrow));\r",
-											"\r",
-											"var inOneMonthsAndOneDay = new Date();\r",
-											"inOneMonthsAndOneDay.setDate(inOneMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inOneMonthsAndOneDay\", formatDate(inOneMonthsAndOneDay));\r",
-											"\r",
-											"var inTwoMonthsAndOneDay = new Date();\r",
-											"inTwoMonthsAndOneDay.setDate(inTwoMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inTwoMonthsAndOneDay\", formatDate(inTwoMonthsAndOneDay));\r",
-											"\r",
-											"var inThreeMonthsAndOneDay = new Date();\r",
-											"inThreeMonthsAndOneDay.setDate(inThreeMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inThreeMonthsAndOneDay\", formatDate(inThreeMonthsAndOneDay));\r",
-											"\r",
-											"var inFourMonthsAndOneDay = new Date();\r",
-											"inFourMonthsAndOneDay.setDate(inFourMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inFourMonthsAndOneDay\", formatDate(inFourMonthsAndOneDay));\r",
-											"\r",
-											"var inFiveMonthsAndOneDay = new Date();\r",
-											"inFiveMonthsAndOneDay.setDate(inFiveMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inFiveMonthsAndOneDay\", formatDate(inFiveMonthsAndOneDay));\r",
-											"\r",
-											"var inSixMonthsAndOneDay = new Date();\r",
-											"inSixMonthsAndOneDay.setDate(inSixMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inSixMonthsAndOneDay\", formatDate(inSixMonthsAndOneDay));\r",
-											"\r",
-											"var inSevenMonthsAndOneDay = new Date();\r",
-											"inSevenMonthsAndOneDay.setDate(inSevenMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inSevenMonthsAndOneDay\", formatDate(inSevenMonthsAndOneDay));\r",
-											"\r",
-											"var inEightMonthsAndOneDay = new Date();\r",
-											"inEightMonthsAndOneDay.setDate(inEightMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inEightMonthsAndOneDay\", formatDate(inEightMonthsAndOneDay));\r",
-											"\r",
-											"var inNineMonthsAndOneDay = new Date();\r",
-											"inNineMonthsAndOneDay.setDate(inNineMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inNineMonthsAndOneDay\", formatDate(inNineMonthsAndOneDay));\r",
-											"\r",
-											"var inTenMonthsAndOneDay = new Date();\r",
-											"inTenMonthsAndOneDay.setDate(inTenMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inTenMonthsAndOneDay\", formatDate(inTenMonthsAndOneDay));\r",
-											"\r",
-											"var inElevenMonthsAndOneDay = new Date();\r",
-											"inElevenMonthsAndOneDay.setDate(inElevenMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inElevenMonthsAndOneDay\", formatDate(inElevenMonthsAndOneDay));\r",
-											"\r",
-											"var inTwelveMonthsAndOneDay = new Date();\r",
-											"inTwelveMonthsAndOneDay.setDate(inTwelveMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inTwelveMonthsAndOneDay\", formatDate(inTwelveMonthsAndOneDay));\r",
-											"\r",
-											"var inThirteenMonthsAndOneDay = new Date();\r",
-											"inThirteenMonthsAndOneDay.setDate(inThirteenMonths.getDate() + 1);\r",
-											"pm.environment.set(\"inThirteenMonthsAndOneDay\", formatDate(inThirteenMonthsAndOneDay));"
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "f646481d-f33b-41d9-aa0e-e2aa2dba606d",
-										"exec": [
-											"pm.test(\"Status code is 401\", function () {",
-											"    pm.response.to.have.status(401);",
-											"});",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"active\": true,\r\n  \"firstName\": \"{{DEVELOPER 1 firstName}}\",\r\n  \"lastName\": \"{{DEVELOPER 1 lastName}}\",\r\n  \"emailAddress\": \"{{DEVELOPER 1 emailAddress}}\"\r\n}"
-								},
-								"url": {
-									"raw": "{{Host}}/api/employee?password={{DEVELOPER 1 password}}&role=DEVELOPER",
-									"host": [
-										"{{Host}}"
-									],
-									"path": [
-										"api",
-										"employee"
-									],
-									"query": [
-										{
-											"key": "password",
-											"value": "{{DEVELOPER 1 password}}"
-										},
-										{
-											"key": "role",
-											"value": "DEVELOPER"
-										}
-									]
-								}
-							},
-							"response": []
-						},
 						{
 							"name": "Update PROJECTMANAGER 1 should fail",
 							"event": [
