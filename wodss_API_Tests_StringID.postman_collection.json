@@ -11327,9 +11327,6 @@
 								}
 							],
 							"request": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "PUT",
 								"header": [
 									{
@@ -11680,19 +11677,19 @@
 											"    pm.expect(jsonData.id).to.eql(pm.environment.get(\"DEVELOPER 2 id\"));",
 											"});",
 											"",
-											"pm.test(\"Response has not firstName: \" + pm.environment.get(\"DEVELOPER 1 firstName\"), function () {",
+											"pm.test(\"Response has not firstName: \" + pm.environment.get(\"DEVELOPER 2 firstName\"), function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.firstName).to.not.eql(pm.environment.get(\"DEVELOPER 1 firstName\"));",
+											"    pm.expect(jsonData.firstName).to.not.eql(pm.environment.get(\"DEVELOPER 2 firstName\"));",
 											"});",
 											"",
-											"pm.test(\"Response has not lastName: \" + pm.environment.get(\"DEVELOPER 1 lastName\"), function () {",
+											"pm.test(\"Response has not lastName: \" + pm.environment.get(\"DEVELOPER 2 lastName\"), function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.lastName).to.not.eql(pm.environment.get(\"DEVELOPER 1 lastName\"));",
+											"    pm.expect(jsonData.lastName).to.not.eql(pm.environment.get(\"DEVELOPER 2 lastName\"));",
 											"});",
 											"",
-											"pm.test(\"Response has not emailAddress: \" + pm.environment.get(\"DEVELOPER 1 emailAddress\"), function () {",
+											"pm.test(\"Response has not emailAddress: \" + pm.environment.get(\"DEVELOPER 2 emailAddress\"), function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.emailAddress).to.not.eql(pm.environment.get(\"DEVELOPER 1 emailAddress\"));",
+											"    pm.expect(jsonData.emailAddress).to.not.eql(pm.environment.get(\"DEVELOPER 2 emailAddress\"));",
 											"});",
 											"",
 											"pm.test(\"Response has expected active: false\", function () {",
